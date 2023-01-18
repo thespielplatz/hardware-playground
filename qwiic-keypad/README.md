@@ -6,9 +6,10 @@
 
 #### Materials
 
-* Raspberry PI Zero 2 W
-* [QWIIC Shim](https://www.sparkfun.com/products/15794)
-* [QWIIC Keypad](https://www.sparkfun.com/products/15290)
+* Raspberry PI Zero 2 W (with connector pins)
+* [QWIIC Shim](https://www.berrybase.at/sparkfun-qwiic-shim-fuer-raspberry-pi)
+* [QWIIC Keypad](https://www.berrybase.at/sparkfun-qwiic-keypad-12-tasten)
+* [QWIIC Cable](https://www.berrybase.at/sparkfun-qwiic-kabel-500mm)
 
 #### How To
 * Checkout [Hookup Guide](https://learn.sparkfun.com/tutorials/qwiic-shim-for-raspberry-pi-hookup-guide#hardware-overview)
