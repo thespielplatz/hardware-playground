@@ -1,5 +1,7 @@
 # QWIIC Keypad
 
+![qwiic-keypad](img/qwiic-keypad.png)
+
 ### Hardware
 
 #### Materials
@@ -15,6 +17,8 @@
 
 ### Software
 
-t.b.c.
+```bash
+sudo node app.js
+```
 
-
+- I think there is something not correct with the timing, that's why there are errors.

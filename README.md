@@ -1,9 +1,15 @@
 # Hardware Playground
 _by [#thespielplatz](https://t.me/thespielplatz)_
 
-[![MIT License Badge](docs/license-badge.svg)](LICENSE)
+[![MIT License Badge](docs/img/license-badge.svg)](LICENSE)
 
 A collection of first try's and tech demos. Please feel free to use and/or contribute
+
+## List of Prototypes
+
+- [SparkFun Qwiic Keypad - 12 Button](qwiic-keypad)
+
+![qwiic-keypad](qwiic-keypad/img/qwiic-keypad.png)
 
 # Tip me
 
