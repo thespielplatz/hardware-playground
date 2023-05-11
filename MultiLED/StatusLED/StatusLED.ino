@@ -1,4 +1,4 @@
-#define LED_BUILTIN 14 // ESP32 WROOM DA
+#define LED_BUILTIN 1 // ESP32 WROOM DA
 
 /////////// STATUS LED ////////////////
 #include "MultiLed.h"
@@ -16,17 +16,26 @@ void setup() {
 int count = 0;
 
 void loop() {
-  Serial.print("Blink"); Serial.print(count++); Serial.println();
+  Serial.print("Blink Round #"); Serial.print(count++); Serial.println();
 
+  Serial.println("COLOR_OFF");
   digitalWrite(LED_BUILTIN, HIGH);
   multiLed.setColor(MultiLed::COLOR_OFF);
-  delay(500);                      
- 
+
+  delay(1000);                      
   digitalWrite(LED_BUILTIN, LOW);
 
-  for (int color = 1; color <= MultiLed::COLOR_BLUE; color++) {
-    multiLed.setColor(color);
-    delay(500);                      
-  }
+  Serial.println("COLOR_RED");
+  multiLed.setColor(MultiLed::COLOR_RED);
+  delay(1000);                      
+
+  Serial.println("COLOR_GREEN");
+  multiLed.setColor(MultiLed::COLOR_GREEN);
+  delay(1000);                      
+
+  Serial.println("COLOR_BLUE");
+  multiLed.setColor(MultiLed::COLOR_BLUE);
+  delay(1000);                      
+
 }
 
