@@ -19,5 +19,4 @@ A collection of first try's and tech demos. Please feel free to use and/or contr
 
 # Tip me
 
-If you like this project, please adapt the landingpage to your local stores, that
-accept bitcoin or even extend it. Why not [send some tip love?](https://getalby.com/p/thespielplatz)
+If you appreciate this project, feel free to use it, refactor it, enjoy it, or even expand on it. Why not [send some tip love?](https://getalby.com/p/thespielplatz)
