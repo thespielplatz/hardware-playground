@@ -1,5 +1,5 @@
 # Hardware Playground
-_by [#thespielplatz](https://t.me/thespielplatz)_
+_by [#thespielplatz](https://github.com/thespielplatz)_
 
 [![MIT License Badge](docs/img/license-badge.svg)](LICENSE)
 
