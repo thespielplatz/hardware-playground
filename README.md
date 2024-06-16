@@ -19,4 +19,4 @@ A collection of first try's and tech demos. Please feel free to use and/or contr
 
 # Tip me
 
-If you appreciate this project, feel free to use it, refactor it, enjoy it, or even expand on it. Why not [send some tip love?](https://getalby.com/p/thespielplatz)
+If you like this project, give it a star! If you love it, fork it and take it out for dinner. 🌟🍽️ And hey, why not [send some tip love?](https://thespielplatz.com/tip-jar)
