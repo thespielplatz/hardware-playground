@@ -15,12 +15,16 @@ fs::LittleFSFS &FlashFS = LittleFS;
 
 Audio audio;
 
+// Radio
 static constexpr uint RADIO_RESET_PIN PROGMEM = 23;
 static constexpr uint I2C_SDA_PIN PROGMEM = 21;
 static constexpr uint I2C_SCL_PIN PROGMEM = 22;
 
 #define RADIO_STATION_ID "Mirror Radio"
 Si47xx radio = Si47xx();
+
+// Button
+#define BUTTON_FROM_MIRROR 4
 
 void FmRadioSetTxPower(uint percent) {
   uint dbuv;
@@ -49,9 +53,17 @@ void playAudio() {
   audio.connecttoFS(LittleFS, AUDIO_FILE);
 }
 
+boolean isButtonPressed() {
+  return digitalRead(BUTTON_FROM_MIRROR) == HIGH;
+}
+
 void setup() {
   Serial.begin(115200);
-  Serial.println("Starting...");
+  Serial.println("Starting....");
+
+  sleep(1);
+
+  pinMode(BUTTON_FROM_MIRROR, INPUT);
 
   if (!FlashFS.begin(FORMAT_LITTLEFS_IF_FAILED)) {
     Serial.println("An Error has occurred while mounting LittleFS");
@@ -62,7 +74,7 @@ void setup() {
     Serial.println("Failed to open file for reading");
     return;
   }
-  file.close();
+  file.close(); 
 
   audio.setPinout(I2S_BCLK, I2S_LRC, I2S_DOUT);
   audio.setVolume(21); // 0...21
@@ -73,13 +85,18 @@ void setup() {
 
   FmRadioSetTxPower(95);
   FmRadioSetFreq(102000); // 102
+
+  Serial.println("Ready");
 }
 
 void loop() {
   audio.loop();
+
   if (!audio.isRunning()) {
-    Serial.println("Audio reset");
-    playAudio();
+    if (isButtonPressed()) {
+      Serial.println("Button pressed --> Play audio");
+      playAudio();
+    }
   }
   yield(); // Make sure WiFi can do its thing.
 }
